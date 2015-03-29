@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template name="Windows/FileSecurity/EffectivePermissions" majorSystemVersion="6" minorSystemVersion="1">
+  <lookup image="%SystemRoot%\explorer.exe">
+    <window name="dialog" class="#32770" note="Advanced Security Settings for Temp">
+      <window name="pageEffectivePermissions" marker="true" class="#32770" note="Effective Permissions">
+        <window name="labelHint" class="Static" controlId="6020" note="The following list displays the permissions that would be granted to the selected group or user, based solely on the permissions granted directly through group membership." />
+        <window name="labelObjectName" class="Static" controlId="1014" visible="true" note="Object name:" />
+        <window name="textObjectName" class="Edit" controlId="1015" visible="true" note="C:\Temp" />
+        <window name="labelPrincipal" class="Static" controlId="6014" visible="true" note="&amp;Group or user name:" />
+        <window name="textPrincipal" class="Edit" controlId="6013" visible="true" note="" />
+        <window name="buttonSelect" class="Button" controlId="6007" visible="true" note="&amp;Select..." />
+        <window name="labelPermissions" class="Static" controlId="6015" visible="true" note="&amp;Effective permissions:" />
+        <window name="listPermissions" class="SysListView32" controlId="6009" visible="true" note="List3"/>
+        <window name="linkHelp" class="Link Window" controlId="6021" note="&lt;A&gt;How are effective permissions determined?&lt;/A&gt;" />
+      </window>
+    </window>
+  </lookup>
+  <setup>
+    <hide name="labelHint"/>
+    <hide name="linkHelp"/>
+    <move name="labelObjectName" left="10" top="14"/>
+    <move name="textObjectName" left="90" top="14"/>
+    <move name="labelPrincipal" left="10" top="38"/>
+    <move name="textPrincipal" left="10" top="58"/>
+    <move name="buttonSelect" left="522" top="57"/>
+    <move name="labelPermissions" left="10" top="90"/>
+    <move name="listPermissions" left="10" top="110"/>
+    <size name="listPermissions" width="579" height="254"/>
+  </setup>
+</template>

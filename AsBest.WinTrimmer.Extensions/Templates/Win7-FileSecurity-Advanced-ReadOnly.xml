@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<template name="Windows/FileSecurity/Advanced(ReadOnly)" majorSystemVersion="6" minorSystemVersion="1">
+  <lookup image="%SystemRoot%\explorer.exe">
+    <window name="dialog" class="#32770" visible="true">
+      <window name="pageSecurity" marker="true" class="#32770" note="Security">
+        <window name="labelHint" controlId="0x1784" class="Static"/>
+        <window name="labelObjectName" controlId="0x03F6" class="Static" visible="true"/>
+        <window name="textObjectName" controlId="0x03F7" class="Edit" visible="true"/>
+        <window name="labelPermissions" controlId="0x07D9" class="Static" note="Permission en&amp;tries:"/>
+        <window name="listPermissions" controlId="0x07D1" class="SysListView32" visible="true"/>
+        <window name="buttonChange" controlId="0x03EB" class="Button" visible="true" note="&amp;Change Permissions..."/>
+        <window name="checkInheritance" controlId="0x07D6" class="Button" note="&amp;Include inheritable permissions from this object's parent"/>
+        <window name="linkHelp" controlId="0x1785" class="Link Window" note="&lt;A&gt;Managing permission entries&lt;/A&gt;"/>
+      </window>
+    </window>
+  </lookup>
+  <setup>
+    <hide name="labelHint"/>
+    <hide name="labelPermissions"/>
+    <hide name="linkHelp"/>
+    <text name="checkInheritance" value="&amp;Inherit permissions from parent object"/>
+    <move name="labelObjectName" left="10" top="14"/>
+    <move name="textObjectName" left="90" top="14"/>
+    <move name="buttonChange" left="459" top="322"/>
+    <size name="checkInheritance" width="280" height="13"/>
+    <move name="checkInheritance" left="10" top="326"/>
+    <move name="listPermissions" left="10" top="36"/>
+    <size name="listPermissions" width="579" height="278"/>
+  </setup>
+</template>

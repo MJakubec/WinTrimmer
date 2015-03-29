@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<template name="Windows/FileSecurity/Advanced(Editable)" majorSystemVersion="6" minorSystemVersion="1">
+  <lookup image="%SystemRoot%\explorer.exe">
+    <window name="dialog" class="#32770" visible="true">
+      <window name="pageSecurity" marker="true" class="#32770" note="Security">
+        <window name="labelHint" controlId="0x1784" class="Static"/>
+        <window name="labelObjectName" controlId="0x03F6" class="Static" visible="true"/>
+        <window name="textObjectName" controlId="0x03F7" class="Edit" visible="true"/>
+        <window name="labelPermissions" controlId="0x07D9" class="Static" note="Permission en&amp;tries:"/>
+        <window name="listPermissions" controlId="0x07D1" class="SysListView32" visible="true"/>
+        <window name="buttonAdd" controlId="0x07D2" class="Button" visible="true" note="A&amp;dd..."/>
+        <window name="buttonEdit" controlId="0x07D4" class="Button" visible="true" note="&amp;Edit..."/>
+        <window name="buttonRemove" controlId="0x07D3" class="Button" visible="true" note="&amp;Remove"/>
+        <window name="checkInheritance" controlId="0x07D6" class="Button" note="&amp;Include inheritable permissions from this object's parent"/>
+        <window name="checkPropagation" controlId="0x07D8" class="Button" visible="true" note="Re&amp;place all child object permissions with inheritable permissions from this object."/>
+        <window name="linkHelp" controlId="0x1785" class="Link Window" note="&lt;A&gt;Managing permission entries&lt;/A&gt;"/>
+      </window>
+    </window>
+  </lookup>
+  <setup>
+    <hide name="labelHint"/>
+    <hide name="labelPermissions"/>
+    <hide name="linkHelp"/>
+    <text name="checkInheritance" value="&amp;Inherit permissions from parent object"/>
+    <text name="checkPropagation" value="&amp;Propagate permissions to child objects"/>
+    <move name="labelObjectName" left="10" top="14"/>
+    <move name="textObjectName" left="90" top="14"/>
+    <move name="buttonAdd" left="299" top="322"/>
+    <move name="buttonEdit" left="398" top="322"/>
+    <move name="buttonRemove" left="497" top="322"/>
+    <size name="checkInheritance" width="280" height="13"/>
+    <move name="checkInheritance" left="10" top="326"/>
+    <size name="checkPropagation" width="280" height="13"/>
+    <move name="checkPropagation" left="10" top="349"/>
+    <move name="listPermissions" left="10" top="36"/>
+    <size name="listPermissions" width="579" height="278"/>
+  </setup>
+</template>

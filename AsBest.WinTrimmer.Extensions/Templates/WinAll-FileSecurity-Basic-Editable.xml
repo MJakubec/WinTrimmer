@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<template name="Windows/FileSecurity/Basic(Editable)">
+  <lookup image="%SystemRoot%\explorer.exe">
+    <window name="dialog" class="#32770" visible="true">
+      <window name="pageSecurity" marker="true" class="#32770" note="Security">
+        <window name="labelObjectName" controlId="0x03F6" class="Static" visible="true"/>
+        <window name="textObjectName" controlId="0x03F7" class="Edit" visible="true"/>
+        <window name="labelPrincipals" controlId="0x03F5" class="Static" note="&amp;Group or user names:"/>
+        <window name="listPrincipals" controlId="0x03E8" class="SysListView32" visible="true"/>
+        <window name="buttonAdd" controlId="0x03E9" class="Button" visible="true" note="A&amp;dd..."/>
+        <window name="buttonRemove" controlId="0x03EA" class="Button" visible="true" note="&amp;Remove"/>
+        <window name="labelAllow" controlId="0x03F1" class="Static" visible="true" note="Allow"/>
+        <window name="labelDeny" controlId="0x03F2" class="Static" visible="true" note="Deny"/>
+        <window name="labelPermissions" controlId="0x03F0" class="Static"/>
+        <window name="labelPermissionsLong" controlId="0x1788" class="Static"/>
+        <window name="listPermissions" controlId="0x03EC" class="CHECKLIST_ACLUI" visible="true"/>
+        <window name="labelLearnAbout" controlId="0x1785" class="Link Window" note="&lt;A&gt;Learn about access control and permissions&lt;/A&gt;"/>
+      </window>
+    </window>
+  </lookup>
+  <setup>
+    <hide name="labelPrincipals"/>
+    <hide name="labelLearnAbout"/>
+    <hide name="listPrincipals"/>
+    <hide name="listPermissions"/>
+    <move name="listPrincipals" left="10" top="32"/>
+    <size name="listPrincipals" width="320" height="110"/>
+    <move name="labelPermissions" left="10" top="184"/>
+    <move name="labelPermissionsLong" left="10" top="184"/>
+    <size name="labelPermissionsLong" width="158" height="13"/>
+    <move name="buttonAdd" left="175" top="152"/>
+    <move name="buttonRemove" left="256" top="152"/>
+    <move name="labelAllow" left="204" top="184"/>
+    <move name="labelDeny" left="264" top="184"/>
+    <move name="listPermissions" left="10" top="203"/>
+    <size name="listPermissions" width="320" height="135"/>
+    <show name="listPrincipals"/>
+    <show name="listPermissions"/>
+  </setup>
+</template>
