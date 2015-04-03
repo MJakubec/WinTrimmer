@@ -1,0 +1,47 @@
+<template name="Windows/Services/Properties/General">
+  <lookup image="%SystemRoot%\System32\mmc.exe">
+    <window name="dialog" class="#32770" visible="true">
+      <window name="pageGeneral" class="#32770" visible="true">
+        <window name="labelName" class="Static" controlId="262" />
+        <window name="textName" class="Edit" controlId="214" />
+        <window name="labelDisplayName" class="Static" controlId="264" />
+        <window name="textDisplayName" class="Edit" controlId="213" />
+        <window name="labelDescription" class="Static" controlId="305" />
+        <window name="textDescription" class="Edit" controlId="221" />
+        <window name="labelPath" class="Static" controlId="283" />
+        <window name="textPath" class="Edit" controlId="215" />
+        <window name="labelStartupType" class="Static" controlId="285" />
+        <window name="comboStartupType" class="ComboBox" controlId="224" />
+        <window name="labelStatus" class="Static" controlId="284" />
+        <window name="textStatus" class="Static" controlId="216" />
+        <window name="buttonStart" class="Button" controlId="217" caption="&amp;Start" />
+        <window name="buttonStop" class="Button" controlId="218" caption="S&amp;top" />
+        <window name="buttonPause" class="Button" controlId="219" caption="&amp;Pause" />
+        <window name="buttonResume" class="Button" controlId="220" caption="&amp;Resume" />
+        <window name="labelDelimiter" class="Static" controlId="0xFFFFFFFF" caption="" />
+        <window name="labelHint" class="Static" controlId="0xFFFFFFFF" caption="You can specify the start parameters that apply when you start the service from here." />
+        <window name="labelStartParameters" class="Static" controlId="263" />
+        <window name="textStartParameters" class="Edit" controlId="225" />
+      </window>
+    </window>
+  </lookup>
+  <setup>
+    <hide name="labelHint"/>
+    <move name="labelStartParameters" left="11" top="334"/>
+    <move name="textStartParameters" left="120" top="330"/>
+    <move name="buttonStart" left="11" top="295"/>
+    <move name="buttonStop" left="102" top="295"/>
+    <move name="buttonPause" left="193" top="295"/>
+    <move name="buttonResume" left="286" top="295"/>
+    <move name="labelStatus" left="11" top="270"/>
+    <move name="textStatus" left="102" top="270"/>
+    <move name="labelDelimiter" left="11" top="258"/>
+    <move name="labelStartupType" left="11" top="227"/>
+    <move name="comboStartupType" left="102" top="223"/>
+    <move name="labelPath" left="11" top="182"/>
+    <move name="textPath" left="11" top="200"/>
+    <move name="labelDescription" left="11" top="63"/>
+    <move name="textDescription" left="11" top="80"/>
+    <size name="textDescription" width="358" height="95"/>
+  </setup>
+</template>

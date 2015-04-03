@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AsBest.WinTrimmer</RootNamespace>
-    <AssemblyName>AsBest.WinTrimmer.Client</AssemblyName>
+    <AssemblyName>AsBest.WinTrimmer.Agent</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
